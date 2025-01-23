@@ -63,8 +63,8 @@ int main(int argc, char* argv[])
     
     // Tableau non constant de la couleur
     GLfloat onlyColorTriVertices[] = {
-        0.0, 0.0, 1.0,
-        0.0, 1.0, 0.0,
+        1.0, 0.0, 0.0,
+        1.0, 0.0, 0.0,
         1.0, 0.0, 0.0
     };
     

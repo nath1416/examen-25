@@ -11,7 +11,7 @@ out vec3 colorOut;
 
 void main() {
   mat4 transform = projection * view * model;
-  vec4 position = transform * vec4(position, 1.0) ;
+  vec4 position = transform * vec4(position, 1.0);
   gl_Position = position;
   colorOut = colorIn;
 }
