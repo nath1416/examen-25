@@ -24,6 +24,8 @@ void changePos(GLfloat* pos, float& cx, float& cy, float& dx, float& dy);
 
 std::string readFile(const char* path);
 
+float speed_rot = 0.5f;
+
 int main(int argc, char* argv[])
 {
     Window w;
@@ -88,7 +90,11 @@ int main(int argc, char* argv[])
         
         shaderProgram.use();
         
-        angleDeg += 0.5f;
+        if(w.getKey(Window::Key::T)){
+            speed_rot += 1.0f;
+        }
+
+        angleDeg += speed_rot;
 
         glm::mat4 model = glm::rotate(glm::mat4(1.0f), glm::radians(angleDeg), glm::vec3(0.1f, 1.0f, 0.1f));
 
